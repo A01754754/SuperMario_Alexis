@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 104168827}
   - component: {fileID: 104168826}
   - component: {fileID: 104168825}
-  - component: {fileID: 104168830}
   - component: {fileID: 104168829}
   m_Layer: 0
   m_Name: Personaje
@@ -348,37 +347,25 @@ MonoBehaviour:
       m_Action: Accion Mover
       m_Flags: 8
     m_Flags: 0
-  accionSalto:
-    m_Name: Accion Salto
+  accionSaltar:
+    m_Name: Accion Saltar
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: b7774f2b-f819-477f-9be8-8900306b24f0
+    m_Id: 1205086d-da82-40e5-9c09-0d7ebea523a4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: b88a95cf-f08f-4f05-9163-eaf231615e8c
+      m_Id: 574a5163-9d7f-4f2d-abaf-9d7674bac114
       m_Path: <Keyboard>/space
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Accion Salto
+      m_Action: Accion Saltar
       m_Flags: 0
     m_Flags: 0
-  XVelocity: 5
-  YVelocity: 7
---- !u!114 &104168830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104168824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7b77b51cbad4340b3f4bb7b5c61fd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EstadoPersonaje
+  velocidadX: 5
+  velocidadY: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

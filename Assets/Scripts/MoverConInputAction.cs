@@ -1,48 +1,44 @@
+using UnityEditor.Callbacks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MoverConInputAction : MonoBehaviour
 {
-    [SerializeField] private InputAction accionMover;
-    [SerializeField] private InputAction accionSalto;
+    [SerializeField]
+    private InputAction accionMover;
+    [SerializeField]
+    private InputAction accionSaltar;
 
-    private Rigidbody2D rb;
-    private EstadoPersonaje estado;
+    [SerializeField]
+    private float velocidadX = 5f;
 
-    [SerializeField] private float XVelocity = 5f;
-    [SerializeField] private float YVelocity = 7f;
+    [SerializeField]
+    private float velocidadY = 5f;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        estado = GetComponent<EstadoPersonaje>();
-    }
+    void Start(){
 
-    void OnEnable()
-    {
         accionMover.Enable();
-        accionSalto.Enable();
-        accionSalto.performed += Saltar;
     }
 
-    void OnDisable()
-    {
-        accionMover.Disable();
-        accionSalto.Disable();
-        accionSalto.performed -= Saltar;
+    void OnEnable(){
+        accionSaltar.Enable();
+        accionSaltar.performed += saltar;
     }
 
-    void Update()
+    void OnDisable(){
+        accionSaltar.Disable();
+        accionSaltar.performed -= saltar;
+    }
+
+    void saltar(InputAction.CallbackContext context)
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocityY = velocidadY * 1;
+    }
+
+    void Update(){
         Vector2 movimiento = accionMover.ReadValue<Vector2>();
-        rb.velocity = new Vector2(XVelocity * movimiento.x, rb.velocity.y);
-    }
+        transform.position = (Vector2)transform.position + movimiento*velocidadX*Time.deltaTime;
 
-    public void Saltar(InputAction.CallbackContext context)
-    {
-        if (estado.estaEnSuelo)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, YVelocity);
-        }
     }
 }
