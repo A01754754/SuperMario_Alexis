@@ -17,14 +17,12 @@ public class MovimientoJugador : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
-        accionMover.Enable();
-
-        // Evita que el personaje se rote y se ponga boca abajo
         rb.freezeRotation = true;
     }
 
     void OnEnable()
     {
+        accionMover.Enable();
         accionSaltar.Enable();
         accionSaltar.performed += Saltar;
     }
@@ -38,30 +36,18 @@ public class MovimientoJugador : MonoBehaviour
 
     void Update()
     {
-        // Leer movimiento
         movimiento = accionMover.ReadValue<Vector2>();
 
-        // Animaciones
-        if (movimiento.x > 0)
-        {
-            animator.Play("WalkRight");
-        }
-        else if (movimiento.x < 0)
-        {
-            animator.Play("WalkLeft");
-        }
-        else
-        {
-            animator.Play("Idle");
-        }
+        // Enviar valores al Animator
+        animator.SetFloat("Horizontal", movimiento.x);
+        animator.SetFloat("Speed", Mathf.Abs(movimiento.x));
+        animator.SetFloat("Vertical", rb.linearVelocity.y);
 
-        // Por seguridad, mantener la rotación en 0
         transform.rotation = Quaternion.identity;
     }
 
     void FixedUpdate()
     {
-        // Movimiento horizontal usando Rigidbody2D
         rb.linearVelocity = new Vector2(movimiento.x * velocidadX, rb.linearVelocity.y);
     }
 
