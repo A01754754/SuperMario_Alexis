@@ -17,7 +17,6 @@ public class MovimientoJugador : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
-        rb.freezeRotation = true;
     }
 
     void OnEnable()
@@ -38,7 +37,6 @@ public class MovimientoJugador : MonoBehaviour
     {
         movimiento = accionMover.ReadValue<Vector2>();
 
-        // Enviar valores al Animator
         animator.SetFloat("Horizontal", movimiento.x);
         animator.SetFloat("Speed", Mathf.Abs(movimiento.x));
         animator.SetFloat("Vertical", rb.linearVelocity.y);
