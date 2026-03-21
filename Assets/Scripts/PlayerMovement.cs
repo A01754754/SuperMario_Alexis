@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MovimientoJugador : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private InputAction accionMover;
     [SerializeField] private InputAction accionSaltar;
