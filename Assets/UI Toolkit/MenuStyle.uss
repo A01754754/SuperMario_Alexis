@@ -1,0 +1,19 @@
+.header {
+    font-size: 40px;
+    color: rgb(255, 250, 250);
+    -unity-text-align: upper-center;
+}
+
+.botton {
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    align-self: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("project://database/Assets/Saurabh_Studio/UI%20button%20and%20hallowing%20element%20pack%205/Button%206/7.png?fileID=2800000&guid=d3dd507249881854fbaa9d44a29f0d89&type=3#7");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    color: rgb(255, 250, 250);
+}

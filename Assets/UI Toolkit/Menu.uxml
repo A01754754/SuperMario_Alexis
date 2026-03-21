@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MenuStyle.uss?fileID=7433441132597879392&amp;guid=197359274864e4e409756db0eac8ee63&amp;type=3#MenuStyle"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1; -unity-font-style: bold; background-image: none; top: 0; justify-content: center; -unity-background-scale-mode: stretch-to-fill; background-position-y: bottom 0;">
+        <ui:Label text="Tarea Unity" class="header" style="font-size: 100px;"/>
+        <ui:Button text="Jugar" name="ButtonPlay" enabled="true" focusable="true" emoji-fallback-support="true" picking-mode="Position" class="botton" style="height: 180px; width: 496px; background-color: rgba(188, 188, 188, 0); font-size: 40px;"/>
+        <ui:Button text="Creditos" name="ButtonCredits" class="botton" style="height: 226px; width: 503px; background-color: rgba(188, 188, 188, 0); white-space: pre-wrap; -unity-text-align: middle-center; font-size: 40px;"/>
+        <ui:Button text="Ayuda&#10;" name="ButtonHelp" class="botton" style="height: 247px; width: 483px; background-color: rgba(188, 188, 188, 0); font-size: 40px;"/>
+        <ui:Label text="Alexis Maximiliano Alva Martínez (A01754754)" name="Nombre" style="-unity-text-align: upper-right; font-size: 40px; color: rgb(255, 250, 250); -unity-font-style: bold-and-italic;"/>
+    </ui:VisualElement>
+</ui:UXML>
