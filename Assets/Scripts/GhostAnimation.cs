@@ -1,6 +1,8 @@
+// GhostAnimation.cs
+//Alexis Maximiliano Alva Martínez A01754754
+/*Clase que se encarga de la animación del fantasma, hace que gire y cambie de tamaño cada cierto tiempo*/
 using UnityEngine;
 
-//Clase que se encarga de la animación del fantasma, hace que gire y cambie de tamaño de forma cada cierto tiempo
 public class GhostAnimation : MonoBehaviour
 {
     //Velocidad en la que gira el fantasma

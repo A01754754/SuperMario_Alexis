@@ -1,3 +1,6 @@
+// PlayerMovement.cs
+//Alexis Maximiliano Alva Martínez A01754754
+/*Clase que se encarga del movimiento del jugador, hace que se mueva a los lados y salte al presionar las teclas correspondientes.*/
 using UnityEngine;
 using UnityEngine.InputSystem;
 

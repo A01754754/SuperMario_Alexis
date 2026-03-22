@@ -1,8 +1,10 @@
+// GameController.cs
+//Alexis Maximiliano Alva Martínez A01754754
+/*Clase que al presionar el botón de "Regresar" hace que se cargue la escena del menú*/
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-//Clase que al presionar el botón de "Regresar" se cargue la escena del menú
 public class GameController : MonoBehaviour
 {
     //Referencia al botón de "Regresar" en la UI

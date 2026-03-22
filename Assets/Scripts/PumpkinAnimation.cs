@@ -1,6 +1,8 @@
+// PumpkinAnimation.cs
+//Alexis Maximiliano Alva Martínez A01754754
+/*Clase que se encarga de hacer la "animación" de la calabaza cambiando su color de forma constante.*/
 using UnityEngine;
 
-// Esta clase se encarga de hacer la "animación" de la calabaza cambiando su color entre blanco.
 public class PumpkinAnimation : MonoBehaviour
 {
     // Velocidad en la que sucede el cambio de color

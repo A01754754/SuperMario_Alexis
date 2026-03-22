@@ -1,6 +1,8 @@
+// GoombaController.cs
+//Alexis Maximiliano Alva Martínez A01754754
+/*Clase que se encarga de controlar el movimiento del goomba, hace que se mueva de un lado a otro y cambie de dirección al tocar algo.*/
 using UnityEngine;
 
-//Clase que se encarga de controlar el movimiento del goomba, hace que se mueva de un lado a otro y cambie de dirección al tocar algo.
 public class GoombaController : MonoBehaviour
 {
     //Velocidad con la que se mueve el goomba.
